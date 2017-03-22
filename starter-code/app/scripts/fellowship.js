@@ -204,11 +204,12 @@ document.addEventListener('DOMContentLoaded', function () {
   var theShire = document.querySelectorAll('article')[0]
 
   function thereAndBackAgain () {
-    gollum.document.removeChild(gollum)
+    gollum.parentNode.removeChild(gollum)
     var hobbitFinalList = document.createElement('ul')
     var moveHobbits = body.querySelectorAll('hobbitsList')
     for (var i = 0, length = hobbits.length; i < length; i++) {
       hobbitFinalList.appendChild(hobbitsList[i])
+      console.log(hobbitFinalList)
     }
     theShire.appendChild(hobbitFinalList)
   }
